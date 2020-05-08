@@ -1,0 +1,226 @@
+昨天 （周四）
+1.  封装小程序播放和推流组件
+今天（周五）
+1.  编写小程序组件测试项目
+
+播放器状态改变
+event_id: 32
+event_name: "WechatPlayerStatus"
+status_code: 2002
+
+播放器网络状态统计信息
+event_id: 33
+event_name: "WechatPlayerStatistics"
+video_bitrate: 0
+audio_bitrate: 0
+video_fps: 0
+video_gop: 0
+net_speed: 0
+net_jitter: 0
+video_width: 0
+video_height: 0
+
+推流器状态改变
+event_id: 34
+event_name: "WechatPusherStatus"
+status_code: 1002
+
+推流器网络状态统计信息
+event_id: 35
+event_name: "WechatPusherStatistics"
+video_bitrate: 0
+audio_bitrate: 0
+video_fps: 0
+video_gop: 0
+net_speed: 0
+net_jitter: 0
+video_width: 0
+video_height: 0
+
+昨天 （周三）
+1.  验证小程序组件的重连和打点
+今天（周四）
+1.  修复h5牛会议 断网重连bug
+
+
+实现一个函数 var urlObject = parseUrl(url)，将一段 url 字符串解析为 Object
+
+  例如：
+
+```js
+var url = 'https://www.qiniu.com/products/qcdn?entry=index&ts=1585703058520#feature';
+var urlObject = parseUrl(url);
+console.log(urlObject);
+```
+
+输出结果为：
+
+```js
+{
+  protocol: "https",
+  host: "www.qiniu.com",
+  path: "/products/qcdn",
+  params: {
+    entry: "index",
+    ts: "1585703058520"
+  },
+  hash: "feature"
+}
+```
+
+### 数组去重
+
+```js
+function dedupe(arr) {
+  // ...
+}
+
+dedupe([1, 3, 2, 1, 2]) // [1, 3, 2]
+// 1. === 则认为重复 2. 保持原数组顺序
+// 考虑字符串？
+// 考虑复杂结构？
+// 不使用 Set/Map？ Or 考虑怎么去 polyfill Set/Map
+```
+
+### 移除元素
+
+```js
+var remove = function(vals, val) {
+
+}
+
+const arr = [1, 2, 3, 2, 2]
+const len = remove(arr, 2)
+for (let i = 0; i < len; i++) {
+  console.log(arr[i])
+}
+// 1, 3
+```
+
+小程序
+react
+vue
+mse
+
+js 语言
+nodejs 
+小程序框架
+vue 的使用心得
+react
+typescript
+
+js模块化规范
+浏览器微任务、宏任务
+
+移动端适配flexbox，文字展示
+移动端 css 
+hash history
+window.location
+
+vue-router
+
+现状：
+老官网使用 ruby 技术栈，其中前端部分使用 ruby on rails。后端部分使用 ruby 接口，部分数据来自 CMS 系统。
+
+存在的不足：
+1.通过 ruby 进行渲染，技术栈和 portal 项目有较大差异，不好维护。
+
+解决方法：
+1.使用团队熟悉的 react 框架
+2.使用 JAMStack 技术栈
+
+JAMStack 简介 https://jamstack.org/ 。
+优势：高性能、易扩展、高安全性、友好的开发体验
+
+使用框架：next.js
+主流的框架有 next.js 和 gatsby.js 。gatsby.js 官网中有两者的对比 https://www.gatsbyjs.org/features/jamstack/。
+但是 gatsby.js 框架的特点是大而全，使用起来也比较繁琐。next.js 的开发体验相对而言简单一些，而且成名较早，有更多的成功案例。
+
+开发部署流程：
+1.本地开发完页面
+2.进行代码格式校验、单元测试
+3.校验完成后上传代码到 bucket，刷新 CDN
+
+新老官网内容的隔离：
+1.老官网的接口也页面域名设置为 legacy-www.qiniu.com
+2.调用老接口通过 proxy 来实现
+3.访问老官网中特有的页面通过在 bucket 中设置镜像回源，源站的地址为 legacy-www.qiniu.com
+
+针对 CMS 系统动态生成的内容：
+一期暂时不做。以后的方案可以尝试定期爬取 CMS 的页面，后者爬取数据用定制的模版渲染生成新的页面，部署到 bucket 中。
+
+后端接口：复用活动页的 proxy 代理到 mars、sso、gaea 等服务
+
+全文检索：使用自己开发的 es 服务
+
+为什么不用第三方方案：第三方服务收钱、有很多限制，不如自研稳定
+
+ssh zhuhao@10.20.34.27
+
+qssh vdn-gddg-dls-1-5
+
+docker login reg.qiniu.com -u pili-coresdk@qiniu.com -p Pili@2016
+
+/Users/zhuhao/projects/qiniu/rtndoc/rtn/website/build/QNRTC
+scp -r /Users/zhuhao/projects/qiniu/rtndoc/rtn/website/build/QNRTC zhuhao@10.20.34.27:/home/zhuhao/build
+scp -r /Users/zhuhao/tmp/QNRTC-Linux zhuhao@10.20.34.27:/home/zhuhao/build/QNRTC-Linux
+/Users/zhuhao/tmp/QNRTC-Windows
+qscp -r /home/zhuhao/build/QNRTC-Linux vdn-gddg-dls-1-5:/home/hermes/sdkdoc/env_prod/QNRTC-Linux
+
+/home/hermes/sdkdoc/env_prod
+
+function test() {
+  try {
+    console.log('try')
+    try {
+      console.log('try try')
+    } finally {
+      console.log('try finally')
+    }
+    return 'ccc'
+  } finally {
+    console.log('finally')
+  }
+}
+
+首页
+搜索
+
+64 天
+
+平台概览 14
+  - 卡片 2
+  - 图表 3 * 4
+应用列表 32
+  - 应用列表 2
+    - 创建应用 2
+  - 应用详情
+    - 应用配置 5
+    - 活跃房间 5
+    - 数据概览 8
+    - 质量分析 10
+房间列表 13
+  - 房间列表 2
+  - 详情 5
+    - 音频 3
+    - 视频 3
+用量统计 5
+
+
+
+性能优化
+图片懒加载
+请求预先加载
+base64 本地
+文件抽离
+dns-prefetch
+
+webpack打包 loader 
+code split
+
+打包
+文件抽取 影响性能
+
+dns
+
+官网设计资源 https://lanhuapp.com/web/#/item?cid=&fid=all&tid=63281af8-3e93-4c88-9659-8d16668dc07d

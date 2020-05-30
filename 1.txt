@@ -183,6 +183,69 @@ function test() {
   }
 }
 
+HTML/CSS
+* css盒模型，flex box
+* css优先级
+* css命名空间污染、CSS Module
+* 页面渲染基本过程
+* 事件模型
+
+JS/TS
+* 基础语法
+* this指针
+* 深拷贝
+* JS异步与事件循环
+* JS垃圾回收机制
+* ES6+语法：let，const，async…await，class，箭头函数，…
+
+框架
+* React: 生命周期，HOC，PureComponent与Component，Diff，React 16+新特性
+* Angular: 生命周期，脏检测
+* Vue: 生命周期
+
+状态管理
+* Redux：数据流向与工作流程，如何处理异步状态变更，thunk、saga相关
+* Mobx：数据流向与工作流程，理解reaction
+
+前端工程化
+* npm包管理
+* Webpack：code split，dynamic import
+* git使用
+* 死锁，中断
+
+浏览器
+*跨域
+*存储，cookies, localStorage, sessionStorage
+*同源限制
+*浏览器API
+*调试工具
+
+其它Web知识
+* 性能优化
+* Http协议基础知识
+* xss与csrf
+* 数据可视化: svg，canvas，d3.js，echarts.js，highcharts.js
+
+经验
+实习经验
+公司、部门、岗位、参与项目、汇报对象、留用情况（若应届生，有无留用机会，为什么还出来看机会）、收获、总结
+
+项目经验
+目标/成果，团队协作情况，自身在团队的角色，自身工作对项目的帮助，遇到问题与解决思路、方案，收获、总结/复盘
+
+作品/成果
+自己开发软件/项目/作品成果，做过的研究，论文的发布，代码展示，专利申请
+
+潜力
+学习能力
+好奇心、对新事物的接受度、思考深度、快速学习后解决问题的能力、举一反三
+
+沟通协作
+换位思考，表达能力，与他人/团队/跨团队的协作，矛盾的处理
+
+解决问题能力
+自觉地确定目的，并根据目的来支配、调节自己的行动，克服各种困难，从而实现目的
+
 首页
 搜索
 
@@ -224,3 +287,100 @@ code split
 dns
 
 官网设计资源 https://lanhuapp.com/web/#/item?cid=&fid=all&tid=63281af8-3e93-4c88-9659-8d16668dc07d
+https://cf.qiniu.io/pages/viewpage.action?pageId=39834528
+https://cf.qiniu.io/pages/viewpage.action?pageId=39839187
+
+var num = '10000000000000',
+    reg = /(?=(\B)(\d{3})+$)/g;
+ 
+//每三位加','号
+console.log(num.replace(reg,','))
+//10,000,000,000,000
+ 
+//其他符号只需更改replace()第二个参数即可
+
+11000...11015
+10052 server unavailable
+20001 deviceManager auto switch error
+30001 websocket abort
+
+
+关于错误异常的相关处理，都应在该回调中完成; 需要处理的错误码及建议处理逻辑如下:
+           
+【TOKEN 相关】
+  1. QNRTCErrorTokenError [10001] 您提供的 token 出现了错误；
+ 关于 token 签算规则, 详情请参考【服务端开发说明.RoomToken 签发服务】https://doc.qnsdk.com/rtn/docs/server_overview#1    
+  2. QNRTCErrorTokenExpired [10002] 您提供的 token 已过期, 需要生成可用的 token，再重新加入房间；
+           
+【房间设置相关】以下情况可以与您的业务服务开发确认下具体的设置
+  1. QNRTCErrorRoomIsFull [10011] 当房间已加入人数超过每个房间的人数限制，请与后台服务确认该设置；
+  2. QNRTCErrorUserAlreadyExist [10022] 后台如果配置为开启【禁止自动踢人】,则同一用户重复加入/未正常退出再加入，您的业务可根据实际情况选择配置；
+  3. QNRTCErrorNoPermission [10051] 用户对于特定操作，如合流需要配置权限，禁止出现未授权的用户操作；
+  4. QNRTCErrorRoomClosed [10003, 10005, 10012] 房间已被管理员关闭；
+  
+
+10006 你被踢出房间
+  10021 用户不存在
+  10031 发布的流不存在
+  10032 发布的流的信息不匹配
+  10033 发布的流已经存在
+  10034 发布的流还未准备好
+  10041 订阅的流已经存在
+  10042 订阅的流信息不匹配
+  10043 订阅的流已经存在
+  10044 不能订阅自己
+  10051 没有权限
+  10052 服务器错误
+           
+【其他错误】
+  1. QNRTCErrorAuthFailed 服务验证时出错，可能为服务网络异常。建议重新尝试加入房间；      
+  2. QNRTCErrorPublishFailed 发布失败, 会有如下3种情况:
+     1 ）请确认成功加入房间后，再执行发布操作
+     2 ）请确定对于音频/视频 Track，分别最多只能有一路为 master
+     3 ）请确认您的网络状况是否正常
+            
+  3. QNRTCErrorReconnectTokenError [10004] 内部重连后出错，一般出现在网络非常不稳定时出现，建议提示用户并尝试重新加入房间；
+  4. QNRTCErrorInvalidParameter 服务交互参数错误，请在开发时注意合流、踢人动作等参数的设置。
+
+
+
+switch (error.code) {
+        case QNRTCErrorAuthFailed:
+            NSLog(@"鉴权失败，请检查鉴权");
+            break;
+        case QNRTCErrorRoomIsFull:
+            NSLog(@"房间人数已满");
+            break;
+        case QNRTCErrorTokenError:
+            //关于 token 签算规则, 详情请参考【服务端开发说明.RoomToken 签发服务】https://doc.qnsdk.com/rtn/docs/server_overview#1   
+            NSLog(@"roomToken 错误");
+            break;
+        case QNRTCErrorTokenExpired:
+            NSLog(@"roomToken 过期");
+            break;
+        case QNRTCErrorUserAlreadyExist:
+            NSLog(@"用户已存在");
+            break;
+        case QNRTCErrorNoPermission:
+            NSLog(@"请检查用户是否有权限，如:合流");
+            break;
+        case QNRTCErrorReconnectTokenError:
+            NSLog(@"重新进入房间超时，请务必调用 leaveRoom, 重新进入房间");
+            break;
+        case QNRTCErrorPublishFailed:
+            NSLog(@"发布失败，请查看是否加入房间，并确定对于音频/视频 Track，分别最多只能有一路为 master");
+            break;
+        case QNRTCErrorInvalidParameter:
+            NSLog(@"服务交互参数错误，请在开发时注意合流、踢人动作等参数的设置");
+            break;
+        case QNRTCErrorRoomClosed:
+            NSLog(@"房间已被管理员关闭");
+            break;
+            
+        default:
+            break;
+    }
+
+
+
+

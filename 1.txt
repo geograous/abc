@@ -382,5 +382,323 @@ switch (error.code) {
     }
 
 
+react
+1. vdom, 生命周期，HOC，PureComponent与Component，Diff，React
+2. 调度, hooks, 生命周期, diff, server, context, ref, props, 
+key, state, error, resource, reconciler, jsx, portal, hydrate,
+root, lane, mutablesource, event
+render, setState, forceUpdate, hydrate, createPortal
+
+render阶段发请求？
+提交阶段超时？
+fiberlane 
+setState：render -> commit 
+
+ssr？
+
+
+{
+  LifeTime = 'lifetime',
+  CarryOver = 'carryOver',
+  Minimum = 'minimum'
+}
+
+type=国内HTTP全时段静态加速流量&capacity=500GB&settlement=lifetime
+?shortName=TrustAsiaOVD3&years=2&limit=2&wildcardLimit=-1
+
+scp -r /Users/zhuhao/projects/others/build/QNRTC-iOS zhuhao@10.20.34.27:/home/zhuhao/build
+scp -r /Users/zhuhao/projects/others/build/QNRTC-iOS zhuhao@10.20.34.27:/home/zhuhao/build/QNRTC-iOS
+/Users/zhuhao/tmp/QNRTC-Windows
+qscp -r /home/zhuhao/build/QNRTC vdn-gddg-dls-1-5:/home/hermes/sdkdoc/env_prod/QNRTC
+
+_dnsauth.static4.h5.gaoyong.co
+
+scp -r /Users/zhuhao/projects/qiniu/rtndoc/rtn/website/build/QNRTC zhuhao@10.20.34.27:/home/zhuhao/build/QNRTC
+
+curl 'http://localhost:8081/api/certificate/v1/domainsearch?from=0&size=10&currentCertFilter=true&currentCertId=&currentCertNames=*.qbox.net&certExpiredSort=desc&canDeployFilter=true' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Cache-Control: no-cache' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36' \
+  -H 'DNT: 1' \
+  -H 'Accept: */*' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: http://localhost:8081/certificate/complete/first/5ed8b5f8f9537d528e000014' \
+  -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8' \
+  -H 'Cookie: PORTAL_VERSION=v4; _ga=GA1.1.1957371576.1588939224; ADMIN_FUSION_SESSION=WkpYMldGU1VKNFVVSlpEN0hRUTFDR1MxNk1BS0UwSjIsMTU4OTc4NzEyOTI0ODUxOTcxMixmODE2NDI4NTZiM2ZlZDczNGEwZTZmMGNhNjI0YzE4NDZlNGM4MjZm; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221380485361%22%2C%22%24device_id%22%3A%22171f428725aa32-07960d0a215915-30637d00-1296000-171f428725b93b%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer_host%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22first_id%22%3A%22171f428725aa32-07960d0a215915-30637d00-1296000-171f428725b93b%22%7D; io=iIiM6PfsmLd1WEIJAAAp; csrfToken=R4S0_ZzR4FmVzLrG1INurpII; Hm_lvt_204fcf6777f8efa834fe7c45a2336bf1=1591587648; PORTAL_SESSION=TzkyUU5aS1BIVVRYQUVaSkk4NjJKMkdCQUFOU1JLWUssMTU5MjIxMjYyNjE2NzI1MzMyOSw5ZDllYjljOGI1NzRhNGNmZDY4ZmEwYTNkMDg4MjMwZWJiODc2YmNm; _gid=GA1.1.1525597682.1592212592; Hm_lpvt_204fcf6777f8efa834fe7c45a2336bf1=1592297881' \
+  --compressed
+
+function Persion(name) {
+  this.name = name
+  console.log(this.name)
+}
+
+var a = Persion('aa')
+console.log(a)
+var b = new Persion('bb')
+console.log(b)
+
+class A {}
+class B extends A {}
+
+const a = new A()
+const b = new B()
+
+console.log(a)
+console.log(b)
+console.log(A.prototype)
+console.log(B.prototype)
+
+console.log(v1);
+var v1 = 100;
+function foo() {
+    console.log(v1);
+    //var v1 = 200;
+    console.log(v1);
+}
+foo();
+console.log(v1);
+
+
+?shortName=TrustAsiaDVWildcardG5&years=1&wildcardLimit=1
+SecureSite
+
+var name = 'global';
+var obj = {
+    name: 'local',
+    foo: function(){
+        this.name = 'foo';
+        console.log('obj foo:', this)
+    }.bind(window)
+};
+var bar = obj.foo();
+setTimeout(function() {
+    console.log(window.name);
+}, 0);
+console.log(bar.name);
+  
+var bar3 = bar2 = bar;
+bar2.name = 'foo2';
+console.log(bar3.name);
+
+setTimeout(() => console.log('a'));
+Promise.resolve().then(
+  () => console.log('b')
+).then(
+  () => Promise.resolve('c').then(
+    (data) => {
+      setTimeout(() => console.log('d'));
+      console.log('f');
+      return data;
+    }
+  )
+).then(data => console.log(data));
+
+
+var m= 1, j = k = 0; 
+    function add(n) { 
+      console.log(n)
+        return n = n+1; 
+　 } 
+    y = add(m); 
+    console.log(y)
+    function add(n) { 
+      console.log(n)
+        return n = n + 3; 
+    } 
+z = add(m); 
+console.log(y,z)
+
+dig _dnsauth.testxuzhuozz2.support2technical.me TXT
+
+curl 'http://localhost:8081/api/certificate/v1/ssl/verifyhost?domain=_dnsauth.a.com&method=DNS&value=202006290629225qm1yl5nek8kxvrnm85ci8stx6s8eeopwio0a62vtxksg6ria899' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Cache-Control: no-cache' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36' \
+  -H 'DNT: 1' \
+  -H 'Accept: */*' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: http://localhost:8081/certificate/ssl/detail/5e575820f9537d7b62000168/order' \
+  -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8' \
+  -H 'Cookie: PORTAL_VERSION=v4; _ga=GA1.1.1957371576.1588939224; ADMIN_FUSION_SESSION=WkpYMldGU1VKNFVVSlpEN0hRUTFDR1MxNk1BS0UwSjIsMTU4OTc4NzEyOTI0ODUxOTcxMixmODE2NDI4NTZiM2ZlZDczNGEwZTZmMGNhNjI0YzE4NDZlNGM4MjZm; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221380485361%22%2C%22%24device_id%22%3A%22171f428725aa32-07960d0a215915-30637d00-1296000-171f428725b93b%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_referrer_host%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_traffic_source_type%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%2C%22%24latest_search_keyword%22%3A%22url%E7%9A%84domain%E8%A7%A3%E6%9E%90%E5%A4%B1%E8%B4%A5%22%7D%2C%22first_id%22%3A%22171f428725aa32-07960d0a215915-30637d00-1296000-171f428725b93b%22%7D; io=iIiM6PfsmLd1WEIJAAAp; csrfToken=R4S0_ZzR4FmVzLrG1INurpII; Hm_lvt_204fcf6777f8efa834fe7c45a2336bf1=1591587648,1592464253,1593309449; PORTAL_SESSION=VUFXVVdCVEo1S1dNTjVCUkdONlIwNTFBOVpDODAyVUQsMTU5MzQ4NTc2OTkwMTA0MjIwOCxlOTNlNmMxYjQyMWNiNDg3YTI3MDU0YjllZDdlN2U2YWM1M2Y3NWU5; Hm_lpvt_204fcf6777f8efa834fe7c45a2336bf1=1593580433' \
+  --compressed
+
+
+  curl 'http://portalv4.dev.qiniu.io/api/certificate/v1/ssl/verifyhost?domain=_dnsauth.testxuzhuozz4.support2technical.me&method=DNS&value=2020070109280651t4lvwgq1go2q9lwdopcuypo1uthdqu0mesmtw815s4cqu5ja' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Cache-Control: no-cache' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36' \
+  -H 'DNT: 1' \
+  -H 'Accept: */*' \
+  -H 'Referer: http://portalv4.dev.qiniu.io/certificate/ssl/detail/5eba7421242b807c34000002/order' \
+  -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8' \
+  -H 'Cookie: _ga=GA1.2.1291642383.1588990335; gr_user_id=e0a950f3-8955-41e9-98e8-0146bf021f19; PORTAL_VERSION=v4; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221380485361%22%2C%22%24device_id%22%3A%22171f9081ce57d5-0dbf588c113254-30637d00-1296000-171f9081ce6857%22%2C%22props%22%3A%7B%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%22171f9081ce57d5-0dbf588c113254-30637d00-1296000-171f9081ce6857%22%7D; Hm_lvt_204fcf6777f8efa834fe7c45a2336bf1=1591857250; grwng_uid=0368bc5e-a83e-4f15-a27e-f1a000eb11f7; SSID=VEdRUEtDR0NSMVUwSUo1TThDMTVVQkg2MVZRTTVHQ0EyUFVSTSwxNTkzMzA5NTI3MjkwMzk5NjcyLDlmZGU1N2M2OWNkODBiYmFhMDJiMGY0YjBhODMwNGVhZjIwOTQ2MzZiNzk2ODk0MzRiNDE0OTllOGRmNDI1ZTM5NDk1ZjJiYzQwOTRlZTQ1NzJiYTkwODlhMDQwM2M1YzE2OTQ0ZDgwMjZjNWJjZTY2MjZlNzExYTY2MGFiYWIz; PORTAL_UID=1380485361; PORTAL_SESSION=SjVLMzNYOFBRSVdFV1JHVDk2U1NTQUhXQkgwRzdIWlgsMTU5MzY3OTQxNTc3MzY2MDY2NywxYWRkZDZmZmIyYTIwZDJmYjEyN2I3Y2M0N2IyNGI4OTU4NjQ4MjQ0; _gid=GA1.2.18247825.1593679416; _gat=1; Hm_lpvt_204fcf6777f8efa834fe7c45a2336bf1=1593684579' \
+  --compressed \
+  --insecure
+
+  Web 前端开发工程师（音视频方向）
+
+岗位职责
+
+参与 Web 前端音视频 SDK 的设计与开发
+参与小程序音视频 SDK 的设计与开发
+任职要求
+
+擅长 HTML，CSS，JavaScript 等 Web 前端技术
+熟悉 npm/yarn/lerna 等 Node.js 包管理工具，熟悉 Webpack/gulp 等打包工具的使用，熟练使用 React，熟悉 react 生态系统
+熟悉微信小程序的开发
+了解后端开发语言，熟悉 Node.js，Golang 等语言
+熟悉 TCP/IP，HTTP, WebSocket，HTTPS 协议并了解 RESTful 规范
+良好的数据结构和算法基础, 良好的工程素养以及关于 Paper, IETF RFC 与 Open Source 的基本阅读与理解能力
+拥有良好的编码习惯, 热爱多媒体研发工作, 喜欢创新挑战, 自我驱动能力强, 具备良好的沟通能力和团队协作精神
+加分项
+
+具备音视频、流媒体、小程序相关产品和项目开发经验
+了解 h5 播放器相关知识
+了解音视频、流媒体基础知识，了解 H.264、AAC、MP3、FLV、MP4 等常用编码与容器格式
+具备大型工程实践或开源软件（例如 FFmpeg）等应用经验
+
+puppeteer
+我是一个热爱生活，爱好广泛的人。平时有空就会去健身房健身、跑步，也经常去参加各种活动。同时我也是个有计划，懂自律的人。在工作学习以及生活中，我都有合理的计划，会扮演好各个角色。
+
+负责cdn、证书业务的相关的系统（主要是面向客户的portal和面向内部运维和技术支持的admin）的前端开发维护。
+负责连麦（webrtc）业务的h5 sdk和小程序 sdk，以及牛会议（使用七牛连麦 sdk的视频会议demo）的开发维护。
+
+七牛连麦h5和小程序sdk
+H5 sdk使用typescript语言开发，采用jest、puppeteer进行自动化测试，通过事件的方式联通业务逻辑和底层逻辑，收集并上报错误异常，实时监控服务质量。对应的会议demo牛会议采用React框架进行开发，部署在七牛云容器平台上。
+小程序sdk对微信的live-player、live-pusher进行了封装，自动进行网络异常处理，错误重试。
+
+七牛新官网改版
+官网使用 Next.js 框架，导出静态站点部署到公有云存储中，使用CDN加速优化资源加载，采用镜像回源的方式兼容老站点。
+
+七牛CDN以及证书的portal系统
+portal 系统采用 react 框架，数据管理使用 mobx，表单使用 formstate，组件库使用 react-icecream（基于 antd 组件库）。
+
+
+深度思考、化繁为简、脚踏实地、仰望星空
+
+h5 sdk使用 typescript 语言开发，采用 jest、puppeteer 进行自动化测试，通过事件的方式联通业务逻辑和底层逻辑，收集并上报错误异常，实时监控服务质量。对应的会议demo牛会议采用 React 框架进行开发，部署在七牛云容器平台上。
+小程序 sdk 对微信的 live-player、live-pusher 进行了封装，自动进行网络异常处理，错误重试。
+
+七牛新官网改版
+
+
+负责带娃去哪儿、摄影频道、vip 权益日、会员等级等栏目的h5开发维护。
+负责七夕活动的h5、小程序的开发。
+负责男神女神微信增粉活动的微信公众号开发。
+负责手机QQ的大众点评轻应用开发。
+参与数据中台开发。
+
+负责商家端和平台端的客服聊天系统前端部分（适配移动端的h5）的开发维护。
+负责商家平台和运营平台中客服模块前端的开发维护。
+
+客服聊天系统
+
+
+
+负责cdn、证书业务的相关的系统（主要是面向客户的portal和面向内部运维和技术支持的admin）的前端开发维护。
+负责连麦（webrtc）业务的h5 sdk和小程序 sdk，以及牛会议（使用七牛连麦 sdk的视频会议demo）的开发维护。
+部分项目经验：
+portal 系统中，七牛CDN、证书等业务模块
+负责 CDN、证书等业务模块的开发和维护。
+使用 React 框架 typescript 语言开发，采用 fec-builder 进行构建，采用 mobx 管理前端状态，组件库使用 react-icecream（基于 antd），表单库使用 formstate。
+七牛新官网改版
+负责新官网的首页和公司介绍页的开发。负责的其他内容有
+公共模块：顶部通知栏、底部导航。
+业务组件：文档链接、客户案例、接入流程
+产品页：CDN、CDN OEM、SSL 证书、智能多媒体、实时音视频、直播
+使用 Next.js 框架，适配移动端，导出静态站点部署到公有云存储中，使用CDN加速优化资源加载，采用镜像回源的方式兼容老站点。
+七牛连麦 sdk
+负责 h5 sdk 和小程序 sdk 以及对应demo 牛会议的开发维护。
+h5 sdk使用 typescript 语言开发，采用 jest、puppeteer 进行自动化测试，通过事件的方式联通业务逻辑和底层逻辑，收集并上报错误异常，实时监控服务质量。对应的会议demo牛会议采用 React 框架进行开发，部署在七牛云容器平台上。
+小程序 sdk 对微信的 live-player、live-pusher 进行了封装，自动进行网络异常处理，错误重试。
+
+
+负责带娃去哪儿、摄影频道、vip 权益日、会员等级等栏目的 h5 开发维护。
+负责七夕活动的h5、小程序的开发。
+参与数据中台开发。
+负责男神女神微信增粉活动的微信公众号开发。
+负责手机QQ的大众点评轻应用开发。
+部分项目经验：
+会员等级
+负责滚动定位组件、滑动组件以及相应的模块的开发。
+项目内嵌在大众点评 app 中，使用 hybrid 的开发方式，支持生成图片，支持分享到各个平台。
+七夕活动
+负责答题模版和答题结果模块的小程序和 h5 开发。
+采用构建站点的技术，文案、细节动态可配置。
+带娃去哪儿
+负责整体开发。
+使用地图组件，基于地理位置信息进行商家展示，带有下拉二楼的形式展示个人信息。
+数据中台面
+负责大多数基础图表模版和归因模型的开发。
+基于 react、echarts 框架。支持图表模版功能（包含基础图表、漏斗、归因模型这几类），可以使用模版添加、配置图表；支持自定义图表的展示位置和布局。对图表的展示进行了一定的性能优化，满足展示大量图表的场景
+大众点评轻应用
+负责大众点评美食轻应用的开发和维护，项目基于手机 QQ 轻应用框架，使用 lua 开发，其中的缓动效果都自己实现。
+
+
+
+负责商家端和平台端的客服聊天系统前端部分（适配移动端的 h5）的开发维护。
+负责商家平台和运营平台中客服模块前端的开发维护。
+部分项目经验：
+客服聊天系统
+负责 h5 端的开发，使用 ionic 框架，适配移动端，通过 websocket 与后端同步数据
+商家平台中客服相关模块
+负责客服相关的模块，使用 react 框架开发，使用 webpack、babel 编译打包
+
+亚信dv通配符
+?shortName=TrustAsiaDVWildcardG5&wildcardLimit=1&years=1
+geotrust ov通配符
+?shortName=TrueBizIDWildcard&wildcardLimit=1&years=1
+geotrust ov
+?shortName=TrueBizID&limit=1&years=1
+digicert ev
+?shortName=SecureSiteEV&limit=1&years=2
+
+
+verify host args: struct { Domain string "param:\"domain\""; Path string "param:\"path\""; Value string "param:\"value\""; Method string "param:\"method\"" }{Domain:"_dnsauth.bb.qbox.net", Path:"", Value:"2020070907250661rckkxiscssyovcmb99x0k3y9j3h0cca1qxnjbmtx6cvlaske", Method:"DNS"}
+
+张震
+
+react
+了解 hooks、生命周期
+vdom 不太熟悉
+
+常家鑫：熟悉 react 的常规使用方式；熟悉 cors 跨域的处理方式；英文达到 cet 6，熟练阅读外文资料
+
+
+问题1: 得物、爱库存、趣头条offer在价格差不多的时候怎么选择？
+问题2: 自己想造轮子，怎么说服leader?
+问题3: 在普通的公司怎么有效沉淀技术?
+
+
+卢宏轩
+英语水平出色大二一次过cet6，基础较好，学习能力较强
+基本了解选择器优先级，页面渲染基本流程
+了解let,var的区别，不了解微任务、宏任务
+不了解vue和react，之前都用原生js操作dom
+了解git，不太熟悉npm
+了解cookie，localstorage，不熟悉跨域
+了解http，不熟悉性能优化
+做的项目能跑通，但是技术栈比较老旧（未用框架，原生js，用html比较多）
+候选人有对前端很有热情，数学（考研128）、英语、计算机基础（考研111）能力很强，比较踏实可靠，但学习前端的时间太短，还处于前端基础学习的阶段，不适合干活
+
+react
+了解 hooks、生命周期
+vdom 不太熟悉
+
+常家鑫：
+英文达到 cet 6，熟练阅读外文资料；
+熟悉事件循环知道微事件、宏事件；
+熟悉 react 的常规使用方式，了解jsx、生命周期、hooks，但是不了解 diff 的流程，vdom 的细节，使用过 redux，关注 graphql；
+熟悉 cors 跨域的处理方式，了解 access-control-* 等几个头，但是不了解简单请求和复杂请求，只是在 express 插件中配置过，了解过 jsonp，不熟悉其中的细节；
+熟悉 webpack 的使用，了解其中 loader 和 plugin 的概念；
+性能优化和 http 基础知识方面有初步的了解
+总体来说候选人在前端开发的多个方向都有涉猎，能进行基础的开发工作，英文水平和学习能力较强，但可能接触时间短，各个方面了解不深入
 
 
